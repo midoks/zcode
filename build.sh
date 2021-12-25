@@ -18,4 +18,7 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
 #echo $g4
 
 
-clang `pkg-config --libs --cflags gtk4` -O3 -g0  -o hello hello.c
+# clang `pkg-config --libs --cflags gtk4` -O3 -g0  -o hello hello.c
+
+
+gcc -o hello hello.c `pkg-config --cflags --libs gtk4`
